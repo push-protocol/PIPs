@@ -16,7 +16,7 @@ Every notification in the frontend/ UI needs to be formatted or styled in a spec
 | [d: textcontent]  | \<PUSHText color="primary">Hello World \</PUSHText>  | For colored text  | EPNS Primary colored Text  |
 | [s: textcontent]  | \<PUSHText color="secondary">Hello World \</PUSHText>   | For colored text  | EPNS Secondary colored Text   |
 | [t: textcontent]  |\<PUSHText color="tertiary">Hello World \</PUSHText>  | For colored text  | EPNS Tetiary colored Text  |
-|[u: textcontent] | \<EPNSLink color=”red”>\[EPNS Website](https://www.epns.io) \</EPNSLink> | For URL’s | Underlined, Red Colored Text |
+|[u: textcontent] | \<PUSHText color="green" link\="https://www.epns.io"> EPNS website \</PUSHText> | For URL’s | Underlined, Red Colored Text |
 
 
 ## Reference Implementation - 
@@ -94,5 +94,5 @@ Every notification in the frontend/ UI needs to be formatted or styled in a spec
 > Use case - For URL’s
 > Current Markdown - <EPNSLink color=”red”>[EPNS Website](https://www.epns.io) </EPNSLink>
 > Backward compatibility - [u: textcontent]
-> Implementation - <EPNSLink color=”red”>[EPNS Website](https://www.epns.io) </EPNSLink>
+> Implementation - <PUSHText color="green" link="https://www.google.com">Hello World </PUSHText>
 ```
