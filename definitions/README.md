@@ -44,7 +44,7 @@ For Subcategory: **Nofification**
 
 1. **Verification**: Addresses different types of verifications that can be used while sending a notification to Push node.'
 
-2. **Identity**: Identitifies from where a notification payload is coming along with what is the storage mode, protocol to transform it to json payload, etc. 
+2. **Identity**: Identitifies from where a notification payload is coming along with what is the storage mode, protocol to transform it to json payload, etc.
 
 3. **payload**: Addresses what payload of the notification should contain including the way notification should be encrypted, things payload can carry and how they transform and the recipients for which it is intended to be.
 
