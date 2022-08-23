@@ -10,7 +10,7 @@ PIPs define the standards in the Push protocol ecosystem in which anyone can cre
 
 Before you initiate a pull request, please read the [PIP-1](./PIPs/consideration/pip-1-workflow-index.md) process document. Read  [definitions](./definitions) to understand types, categories, subcategories, and niches. Ideas should be thoroughly discussed on [Push discord](https://discord.gg/YVPB99F9W5) or [Push forum](https://gov.epns.io/c/general-discussions/18).
 
-Read this to learn about how to submit proposal](./pip-lifecycle.md) and [template](./pip-template.md) of standard PIPs.
+Read this to learn about how to [submit proposal](./pip-lifecycle.md) and [template](./pip-template.md) of standard PIPs.
 
 # Accepted PIPs
 
