@@ -46,9 +46,9 @@ For Subcategory: **Nofification**
 
 2. **Identity**: Identitifies from where a notification payload is coming along with what is the storage mode, protocol to transform it to json payload, etc. 
 
-3. **payload**: Addresses what payload of the notification should contain including the way notification should be encrypted, things payload can carry and how they transform and the recipients for which it is intended to be.
+3. **Payload**: Addresses what payload of the notification should contain including the way notification should be encrypted, things payload can carry and how they transform and the recipients for which it is intended to be.
 
-4. **content**: Defines how content inside the notfication can be displayed, mostly markdown for title and the body of notification.
+4. **Content**: Defines how content inside the notfication can be displayed, mostly markdown for title and the body of notification.
 
 For Subcategory: **Chat**
 
