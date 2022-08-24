@@ -42,7 +42,7 @@ Niche are optional and are required in some **Subcateory** sections. they define
 
 For Subcategory: **Nofification**
 
-1. **Verification**: Addresses different types of verifications that can be used while sending a notification to Push node.'
+1. **Verification**: Addresses different types of verifications that can be used while sending a notification to Push node.
 
 2. **Identity**: Identitifies from where a notification payload is coming along with what is the storage mode, protocol to transform it to json payload, etc. 
 
