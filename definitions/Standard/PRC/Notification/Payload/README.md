@@ -6,6 +6,8 @@ Each notification sent to the protocol is essentially a JSON payload, bytes data
 
 Notification payload type for EPNS is infinitely extensible and opens a huge range of possibilities including multi-factor authentication, payments, blacklisting address (Multi-sig contract as a channel with exchanges as their subscribers), etc. The data defined in the JSON payload they carry is used to interpret and extend that functionality.
 
+**Note** Due to Identity Type Minimal, it is recommended to not touch the order of invidual JSON object but add things right at the end to maintain compatibility.
+
 ## Specifications
 
 ```
