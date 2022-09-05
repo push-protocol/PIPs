@@ -53,9 +53,10 @@ Subcategory are optional and mainly required for **PRC** category, they define t
 Niche are optional and are required in some **Subcateory** sections. they define the specific low level funcationality that needs to be changed, improved or addressed.
 
 For Subcategory: **Nofification**
+
 1. **Verification**: Addresses different types of verifications that can be used while sending a notification to Push node.
 
-2. **Identity**: Identitifies from where a notification payload is coming along with what is the storage mode, protocol to transform it to json payload, etc. 
+2. **Identity**: Identitifies from where a notification payload is coming along with what is the storage mode, protocol to transform it to json payload, etc.
 
 3. **payload**: Addresses what payload of the notification should contain including the way notification should be encrypted, things payload can carry and how they transform and the recipients for which it is intended to be.
 
@@ -110,7 +111,8 @@ Each Proposal should have the following parts:
 
 * **Reference Implementation** (*Optional)- An optional section that contains a reference/example implementation that people can use to assist in understanding or implementing this specification.
 
-# PIP Formats and Templates - 
+# PIP Formats and Templates -
+
 PIPs should be written in [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) format. There is a [template](../../pip-template.md) to follow.
 
 # Linking to External Resources
@@ -118,6 +120,7 @@ PIPs should be written in [markdown](https://github.com/adam-p/markdown-here/wik
 Links to external resources SHOULD NOT be included. External resources may disappear, move, or change unexpectedly.
 
 # Linking to other PIPs
+
 References to other PIPs should follow the format PIP-N where N is the PIP number you are referring to. Each PIP that is referenced in an PIP MUST be accompanied by a relative markdown link the first time it is referenced, and MAY be accompanied by a link on subsequent references. The link MUST always be done via relative paths so that the links work in this GitHub repository, forks of this repository, the main PIPs site, mirrors of the main PIP site, etc. For example, you would link to this PIP with [PIP-1](./pip-1-workflow-index.md).
 
 # Auxiliary Files
@@ -158,5 +161,6 @@ Once the PIP is ready for the repository, the PIP editor will:
 ```
 
 # History
-This document was derived heavily from [Ethereum's EIP-1](https://eips.ethereum.org/EIPS/eip-1), which was derived heavily from [Bitcoin's BIP-0001](https://github.com/bitcoin/bips) written by Amir Taaki which in turn was derived from [Python's PEP-0001]. The bulk of the text was copied from [Ethereum's EIP-1] and modified as necessary. Although the PEP-0001 text was written by Barry Warsaw, Jeremy Hylton, and David Goodger, 
-they are not responsible for its use in the Push Improvement Proposals (PIPs), and should not be bothered with technical questions specific to **Push**, **Push Protocol** or the **PIP**. Please direct all comments to the [PIP editors](https://github.com/ethereum-push-notification-service/PIPs/definitions).
+
+This document was derived heavily from [Ethereum's EIP-1](https://eips.ethereum.org/EIPS/eip-1), which was derived heavily from [Bitcoin's BIP-0001](https://github.com/bitcoin/bips) written by Amir Taaki which in turn was derived from [Python's PEP-0001](https://www.python.org/dev/peps/). The bulk of the text was copied from [Ethereum's EIP-1] and modified as necessary. Although the PEP-0001 text was written by Barry Warsaw, Jeremy Hylton, and David Goodger,
+they are not responsible for its use in the Push Improvement Proposals (PIPs), and should not be bothered with technical questions specific to **Push**, **Push Protocol** or the **PIP**. Please direct all comments to the [PIP editors](https://github.com/ethereum-push-notification-service/PIPs#pips-standards-editors).
