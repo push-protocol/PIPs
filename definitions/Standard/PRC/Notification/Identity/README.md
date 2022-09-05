@@ -22,7 +22,7 @@ Each notification identity carries at the least two parameters which are joined 
 ### Payload identity implementation - 
 
 ##### **Type 0** :arrow_right:	
->```Payload Storage + Notification Payload Type + Title + body ```
+>```Payload Storage + Notification Type + Title + body ```
 
 
 * ```Notification Payload Type``` - Type of notification (Broadcast, Subset, Targetted, Secret, etc)
