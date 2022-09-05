@@ -1,6 +1,6 @@
 # About Content - Definition / Specs
 ## What is Notification Content?
-Every notification in the frontend/ UI needs to be formatted or styled in a specific manner. Content markdown standardize the content markdown and create a standard for styling and formatting.
+Notification Feeds have the ability to display customized content both for the asub and amsg field of the data payload. By adopting and standardizing the notification content markdown, it ensures that we can keep on advancing the ways notification are presented on the frontend / UI.
 
 ## Specifications
 ``` Current Markdown standards are -   ```
