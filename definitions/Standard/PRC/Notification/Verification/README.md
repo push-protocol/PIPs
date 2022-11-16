@@ -42,7 +42,7 @@ Verification Proof is the outermost composable block that is sent along with the
     "verificationProof":"eip155:<chainId>:<TX-Hash>",
     "channel": "0xd8634c39bbfd4033c0d3289c4515275102423681",
     "recipient": "0xd8634c39bbfd4033c0d3289c4515275102423681",
-	"source": "ETH_TEST_KOVAN or POLYGON_TEST_MUMBAI or ETH_MAINNET"
+	"source": "ETH_TEST_GOERLI or POLYGON_TEST_MUMBAI or ETH_MAINNET"
     "identity": "0+<Notification-Payload-Type>+<Title>+<body>"
 }
 ```
@@ -53,7 +53,7 @@ Verification Proof is the outermost composable block that is sent along with the
     "verificationProof":"eip155:<chainId>:<TX-Hash>",
     "channel": "0xd8634c39bbfd4033c0d3289c4515275102423681",
     "recipient": "0xd8634c39bbfd4033c0d3289c4515275102423681",
-	"source": "ETH_TEST_KOVAN or POLYGON_TEST_MUMBAI or ETH_MAINNET"
+	"source": "ETH_TEST_GOERLI or POLYGON_TEST_MUMBAI or ETH_MAINNET"
     "identity": "1+<IPFS-HASH>"
 }
 ```
@@ -77,7 +77,7 @@ Verification Proof is the outermost composable block that is sent along with the
     "verificationProof":"eip155:<chainId>:<TX-Hash>",
     "channel": "0xD8634C39BBFd4033c0d3289C4515275102423681",
     "recipient": "0xD8634C39BBFd4033c0d3289C4515275102423681",
-	"source": "ETH_TEST_KOVAN or POLYGON_TEST_MUMBAI or ETH_MAINNET",
+	"source": "ETH_TEST_GOERLI or POLYGON_TEST_MUMBAI or ETH_MAINNET",
     "identity": "2+<Payload-in-form-of-string>",
 }
 ```
@@ -94,7 +94,7 @@ To overcome this limitation eip-712v2 is identity idependednt.
     "verificationProof": "eip712v1:<Proof>",
     "channel": "0xD8634C39BBFd4033c0d3289C4515275102423681",
     "recipient": "0xD8634C39BBFd4033c0d3289C4515275102423681",
-	"source": "ETH_TEST_KOVAN or POLYGON_TEST_MUMBAI or ETH_MAINNET",
+	"source": "ETH_TEST_GOERLI or POLYGON_TEST_MUMBAI or ETH_MAINNET",
     "identity": "2+<Payload-in-form-of-string>",
 }
 ```
@@ -108,7 +108,7 @@ To overcome this limitation eip-712v2 is identity idependednt.
     "verificationProof":"eip712v2:<Proof>",
     "channel": "0xd8634c39bbfd4033c0d3289c4515275102423681",
     "recipient": "0xd8634c39bbfd4033c0d3289c4515275102423681",
-	"source": "ETH_TEST_KOVAN or POLYGON_TEST_MUMBAI or ETH_MAINNET",
+	"source": "ETH_TEST_GOERLI or POLYGON_TEST_MUMBAI or ETH_MAINNET",
     "identity": "0+<Notification-Payload-Type>+<Title>+<body>"
 }
 ```
@@ -120,7 +120,7 @@ To overcome this limitation eip-712v2 is identity idependednt.
     "verificationProof":"eip712v2:<Proof>",
     "channel": "0xd8634c39bbfd4033c0d3289c4515275102423681",
     "recipient": "0xd8634c39bbfd4033c0d3289c4515275102423681",
-	"source": "ETH_TEST_KOVAN or POLYGON_TEST_MUMBAI or ETH_MAINNET",
+	"source": "ETH_TEST_GOERLI or POLYGON_TEST_MUMBAI or ETH_MAINNET",
     "identity": "1+<IPFS-HASH>"
 }
 ```
@@ -142,7 +142,7 @@ To overcome this limitation eip-712v2 is identity idependednt.
     "verificationProof": "eip712v2:<Proof>",
     "channel": "0xD8634C39BBFd4033c0d3289C4515275102423681",
     "recipient": "0xD8634C39BBFd4033c0d3289C4515275102423681",
-	"source": "ETH_TEST_KOVAN or POLYGON_TEST_MUMBAI or ETH_MAINNET",
+	"source": "ETH_TEST_GOERLI or POLYGON_TEST_MUMBAI or ETH_MAINNET",
     "identity": "2+<Payload-as-string>",
 }
 ```
@@ -157,7 +157,7 @@ To overcome this limitation eip-712v2 is identity idependednt.
 
 ```
 {
-    "verificationProof":`graph:<subgraph-id>+<notification number>`,
+    "verificationProof":`thegraph:<subgraph-id>+<notification number>`,
     "channel": "0xD8634C39BBFd4033c0d3289C4515275102423681",
     "recipient": "0xD8634C39BBFd4033c0d3289C4515275102423681",
     "source":'THE_GRAPH',
