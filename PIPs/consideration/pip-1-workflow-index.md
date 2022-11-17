@@ -4,13 +4,13 @@
 
 # What is an PIP?
 
-PIP stands for PUSH Improvement Proposal. A PIP is a design document providing information to the EPNS community, or describing a new feature, processes or environment. The PIP should provide a concise technical specification of the feature and a rationale for the feature. The PIP author is responsible for building consensus within the community and documenting dissenting opinions.
+PIP stands for PUSH Improvement Proposal. A PIP is a design document providing information to the Push community, or describing a new feature, processes or environment. The PIP should provide a concise technical specification of the feature and a rationale for the feature. The PIP author is responsible for building consensus within the community and documenting dissenting opinions.
 
 # PIP Rationale
 
-We intend PIPs to be the primary mechanisms for proposing new features, for collecting community technical input on an issue, and for documenting the design decisions that have gone into EPNS ecosystem. Because the PIPs are maintained as text files in a versioned repository, their revision history is the historical record of the feature proposal.
+We intend PIPs to be the primary mechanisms for proposing new features, for collecting community technical input on an issue, and for documenting the design decisions that have gone into Push ecosystem. Because the PIPs are maintained as text files in a versioned repository, their revision history is the historical record of the feature proposal.
 
-For EPNS community, PIPs are a convenient way to track the progress of their implementation. Ideally each implementation maintainer would list the PIPs that they have implemented. This will give end users a convenient way to know the current status of a given implementation or library.
+For Push community, PIPs are a convenient way to track the progress of their implementation. Ideally each implementation maintainer would list the PIPs that they have implemented. This will give end users a convenient way to know the current status of a given implementation or library.
 
 # Understanding PIP Types, Categories, Subcategories and Niche
 
@@ -74,14 +74,14 @@ A PIP must meet certain minimum criteria. It must be a clear and complete descri
 
 # PIP Process
 
-The following is the standardization process for all EPNS Protocol Standards Improvement Proposals:
+The following is the standardization process for all Push Protocol Standards Improvement Proposals:
 
 ![Proposal Process](../../assets/template/pip_lifecycle.png)
 
-**Idea** - An idea that is pre-draft. It can be done over [Push Discord](https://discord.com/invite/YVPB99F9W5) or [Push Forum](https://gov.epns.io/c/general-discussions/18) .
+**Idea** - An idea that is pre-draft. It can be done over [Push Discord](https://discord.com/invite/YVPB99F9W5) or [Push Forum](https://gov.push.org/c/pip/29) .
 
 **Draft** - The first formally tracked stage of a proposal in development. To create draft, you should submit PR request against an issue in
-`epns-protocol-standards` repository. Make sure, draft should be in respective payload standards subdirectory.
+`PIPs` repository. Make sure, draft should be in respective payload standards subdirectory.
 
 **Last Call** - This is the final review window for an PIP before moving to Final. A PIP editor will assign Last Call status and set a review end date (last-call-deadline), typically 14 days later.
 
@@ -97,7 +97,7 @@ If this period results in necessary normative changes it will revert the PIP to 
 
 **Living** - A special status for PIPs that are designed to be continually updated and not reach a state of finality. This includes most notably PIP-1.
 
-## What belongs in a successful EPNS Protocol Standards Improvement Proposal?
+## What belongs in a successful Push Protocol Standards Improvement Proposal?
 
 Each Proposal should have the following parts:
 

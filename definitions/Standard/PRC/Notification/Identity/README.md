@@ -58,10 +58,10 @@ Using type 2 is recommened as it's faster
 > Payload Storage + JSON PAYLOAD SHA-256 HASH
 > - `JSON PAYLOAD` - The json payload
 
-> Example 🤔	 2+{\"notification\":{\"title\":\"EPNS x LISCON\",\"body\":\"Dropping payload directly on push nodes at LISCON 2021.\"},\"data\":{\"acta\":\"\",\"aimg\":\"\",\"amsg\":\"Current BTC price is - 47,785.10USD\",\"asub\":\"\",\"type\":\"3\",\"secret\":\"\"}}
+> Example 🤔	 2+{\"notification\":{\"title\":\"Push x LISCON\",\"body\":\"Dropping payload directly on push nodes at LISCON 2021.\"},\"data\":{\"acta\":\"\",\"aimg\":\"\",\"amsg\":\"Current BTC price is - 47,785.10USD\",\"asub\":\"\",\"type\":\"3\",\"secret\":\"\"}}
 > 
 - `_payloadstorage` is represented as **2**
-- `_payloadhash` is represented as {\"notification\":{\"title\":\"EPNS x LISCON\",\"body\":\"Dropping payload directly on push nodes at LISCON 2021.\"},\"data\":{\"acta\":\"\",\"aimg\":\"\",\"amsg\":\"Current BTC price is - 47,785.10USD\",\"asub\":\"\",\"type\":\"3\",\"secret\":\"\"}}
+- `_payloadhash` is represented as {\"notification\":{\"title\":\"Push x LISCON\",\"body\":\"Dropping payload directly on push nodes at LISCON 2021.\"},\"data\":{\"acta\":\"\",\"aimg\":\"\",\"amsg\":\"Current BTC price is - 47,785.10USD\",\"asub\":\"\",\"type\":\"3\",\"secret\":\"\"}}
 
 <br>
 
