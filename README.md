@@ -8,7 +8,7 @@ PIPs define the standards in the Push protocol ecosystem in which anyone can cre
 
 ## How to submit a PIP?
 
-Before you initiate a pull request, please read the [PIP-1](./PIPs/consideration/pip-1-workflow-index.md) process document. Read  [definitions](./definitions) to understand types, categories, subcategories, and niches. Ideas should be thoroughly discussed on [Push discord](https://discord.gg/YVPB99F9W5) or [Push forum](https://gov.epns.io/c/general-discussions/18).
+Before you initiate a pull request, please read the [PIP-1](./PIPs/consideration/pip-1-workflow-index.md) process document. Read  [definitions](./definitions) to understand types, categories, subcategories, and niches. Ideas should be thoroughly discussed on [Push discord](https://discord.gg/YVPB99F9W5) or [Push forum](https://gov.push.org/c/pip/29).
 
 Read this to learn about how to [submit proposal](./pip-lifecycle.md) and [template](./pip-template.md) of standard PIPs.
 
@@ -40,4 +40,4 @@ Stay in touch! [Website](https://www.epns.io), [Twitter](https://twitter.com/epn
 
 This document was derived heavily from [Ethereum's EIP-1](https://eips.ethereum.org/EIPS/eip-1), which was derived from [Bitcoin's BIP-0001](https://github.com/bitcoin/bips) written by Amir Taaki, which in turn was derived from [Python's PEP-0001](https://www.python.org/dev/peps/). In many places text was simply copied and modified.
 
-Although the PEP-0001 text was written by Barry Warsaw, Jeremy Hylton, and David Goodger, they are not responsible for its use in the PUSH Improvement Process, and should not be bothered with technical questions specific to EPNS or the PIP. Please direct all comments to the [PIP editors](https://github.com/ethereum-push-notification-service/PIPs#pips-standards-editors).
+Although the PEP-0001 text was written by Barry Warsaw, Jeremy Hylton, and David Goodger, they are not responsible for its use in the PUSH Improvement Process, and should not be bothered with technical questions specific to Push or the PIP. Please direct all comments to the [PIP editors](https://github.com/ethereum-push-notification-service/PIPs#pips-standards-editors).
