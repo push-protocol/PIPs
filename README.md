@@ -34,7 +34,7 @@ The current editors are:
 
 ## Contact us
 
-Stay in touch! [Website](https://www.epns.io), [Twitter](https://twitter.com/epnsproject), [Discord](https://discord.gg/YVPB99F9W5), [Docs](https://docs.epns.io), [Whitepaper](https://whitepaper.epns.io/), [Telegram](https://t.me/epnsproject), [Medium](https://medium.com/ethereum-push-notification-service), [YouTube](https://www.youtube.com/c/EthereumPushNotificationService)
+Stay in touch! [Website](https://www.push.org), [Twitter](https://twitter.com/pushprotocol), [Discord](https://discord.gg/YVPB99F9W5), [Docs](https://docs.push.org), [Whitepaper](https://whitepaper.push.org/), [Telegram](https://t.me/epnsproject), [Medium](https://medium.com/ethereum-push-notification-service), [YouTube](https://www.youtube.com/c/EthereumPushNotificationService)
 
 ## History
 
