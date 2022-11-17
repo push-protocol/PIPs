@@ -56,7 +56,7 @@ Using type 2 is recommened as it's faster
 
 ##### **Type 2** :arrow_right:	
 > Payload Storage + JSON PAYLOAD SHA-256 HASH
-> - `JSON PAYLOAD SHA-256 HASH` - The json payload
+> - `JSON PAYLOAD` - The json payload
 
 > Example 🤔	 2+{\"notification\":{\"title\":\"EPNS x LISCON\",\"body\":\"Dropping payload directly on push nodes at LISCON 2021.\"},\"data\":{\"acta\":\"\",\"aimg\":\"\",\"amsg\":\"Current BTC price is - 47,785.10USD\",\"asub\":\"\",\"type\":\"3\",\"secret\":\"\"}}
 > 

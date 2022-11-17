@@ -114,7 +114,7 @@ Notification payload type for EPNS is infinitely extensible and opens a huge ran
     "etime": "[Optional] if given, notif will be deleted after this in epoch"
     "hidden" :"[Optional] if given, notif will not show in user feed"
   },
-    "recipients": 0xtarget
+    "recipients": { 0xtarget : null }
 }
 ```
 <br>
