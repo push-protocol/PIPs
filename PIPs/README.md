@@ -1,10 +1,10 @@
 # PUSH Improvement Proposals (PIPs)
 
-Before you initiate a pull request, please read the [PIP-1](./PIPs/pip-1-workflow-index.md) process document. Ideas should be thoroughly discussed on [EPNS discord](https://discord.gg/YVPB99F9W5) or [EPNS forum](https://gov.epns.io/c/general-discussions/18) .
+Before you initiate a pull request, please read the [PIP-1](./PIPs/pip-1-workflow-index.md) process document. Ideas should be thoroughly discussed on [Push discord](https://discord.gg/YVPB99F9W5) or [Push forum](https://gov.push.org/c/pip/29) .
 
 ## What are PIPs?
 
-PIPs defines the standards in the EPNS protocol ecosystem in which anyone can create, amend these proposals by submitting them. The goal of the PIP project is to document standardized protocols for Push nodes, payload standards, applications and to document them in a high quality and implementable way.
+PIPs defines the standards in the Push protocol ecosystem in which anyone can create, amend these proposals by submitting them. The goal of the PIP project is to document standardized protocols for Push nodes, payload standards, applications and to document them in a high quality and implementable way.
 
 ## How to submit a PIP?
 
