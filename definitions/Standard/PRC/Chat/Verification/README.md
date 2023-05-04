@@ -1,0 +1,85 @@
+# About Verification - Definition / Specs
+
+## What is Verification Proof?
+
+Verification Proof is the outermost composable block that is sent along when updating the state to help the Push Nodes validate the sender and the content of the request, along with any other validation that might be required. Verification proofs differ based on the state change. In the case of creating users, usually carry eip191 proofs. These proofs allow for a flexible and composable structure to validate and process user creation requests on the Push Nodes.
+
+## Specifications
+
+| Verification Proof | Definition                                                             | Proof of Verification                                    |
+| ------------------ | ---------------------------------------------------------------------- | -------------------------------------------------------- |
+| eip712v2:signature | Verification proof generated from off-chain EIP-712 signing of payload | The type is proven by verifying the signature of eip712. |
+| eip191             | Verification proof generated from off-chain EIP-191 signing of payload | The type is proven by verifying the signature of eip712. |
+
+########################################################################################################
+
+1. `eip712v2:signature` - Verification proof generated from off-chain EIP-712 signing of payload.
+
+When creating a user, for this verification proof we take the SHA-256 hash of the below object then eip712 sign it.
+
+```typescript
+{
+    caip10: string,
+    did: string,
+    publickey: string,
+    encryptedprivatekey: string,
+    encryptionType: string,
+    name: string,
+    encryptedPassword: string,
+    nftOwner: string
+}
+```
+
+2. `eip191:signature` - Verification proof generated from off-chain EIP-191 signing of payload.
+
+When creating a user, for this verification proof, we take the SHA-256 hash of the below object then eip191 sign it.
+
+```typescript
+{
+    caip10: string,
+    did: string,
+    publickey: string,
+    encryptedprivatekey: string,
+    encryptionType: string,
+    name: string,
+    encryptedPassword: string,
+    nftOwner: string
+}
+```
+
+### Examples
+
+1. `eip191:signature`
+
+For generating this verification proof, we first generate the JSON below:
+
+```json
+{
+  "caip10": "eip155:0x3E3D52D24b1D96cF275e4fd8bc4F5638Edd1fe51",
+  "did": "eip155:0x3E3D52D24b1D96cF275e4fd8bc4F5638Edd1fe51",
+  "publicKey": "{\"key\":\"-----BEGIN PGP PUBLIC KEY BLOCK-----\\n\\nxsBNBGRT92IBCADDYYObUwK+dPmGzzEZPBWhzAM/cznZyy3StJhaE7uFBXlP\\nktBsoDr9KYmoCmbqVw65Qpaire6x5Y1e/U60/BpFgTtxH/fCHGRAcmAcAf40\\n459hmfhX8g4U0zO/ShBV1Up+9bsRB1ZBiiKE8YtOeTF7UxIx32jhjmDLJfhj\\nivRxwUv7Q8L+tL7V+7TE/L8r8/msYk6Ex6RJVDkVf9OlSJ7kPbBypFbSRaFJ\\nd9DY/tVu5I6rPJMHkhdh4MIcCxxZKLnYcNG1YzE4QW7ZFBpJLzsGXMlMY7AI\\n4Wwx0nvfKTRCeFsrI9ZUDEu6gd0uU1+z9fHGHVW1uy2UIyQMKhFmJrtxABEB\\nAAHNAMLAigQQAQgAPgWCZFP3YgQLCQcICZAOd8K7O81EfwMVCAoEFgACAQIZ\\nAQKbAwIeARYhBKekDJE9u2pk4A+sHQ53wrs7zUR/AADmugf/eNvYR1CnFbbN\\nYGybgK4vIaJ4tB2PZyUvFUgFhiEtGbRezJtCIn4v4QEGIKvvmxca5GjzVUy4\\ntaAVP3NqX+eCfJXONdhixn3F2YNDDSju1v0Z1XIrntPP7PGflNwx/HDXq1dP\\nKAYVz/XhlJlOCLdNUp3qYnAI1p2FwOHfKUidOeC2q5B8tijZHp0DMgkhqXBf\\nR7yFryBoBCUyu8n7xUVaTpU5Zv4jiajY/f/gs6RBRFS+vR83CJMXm4XKcWn2\\nD0Hdmls1+WS/lW260YF6HeIzGqgVaGeLTUC2wUMiUp0JBtHQTTdI+vEnfDFh\\nhDPnRVjPbs32/Btpq2EXefFVKFaTFs7ATQRkU/diAQgA7K4txK+jduioSHmm\\nSGK9WHgKtdgCOqHAZA9ud262iS5f4aEDrn5yrkm+IzRm32V4qZrvwyogQUjf\\n69YBjhSB4DsNON7vLeQnfvjoKGoc48t9ditrXRBKl6MCVcoSIM4W3HCmapR2\\nqzH42R2grPa4kDrmS+YISq4aRkBUFRRJ8M0joZhcup5iJfWGvDTg4Yd7ntOH\\nPCxTVq9nLxz52lBidPawFD678yMrP6H5TmdBEq8rWQPCK3aF6fTvk4qgK6xd\\nOHeGT/LNwi0ZYcLABzrjJ3BLCkNWYSkkb6lUOw4D8ybIFeTuq6AF7SRysqs/\\nONfF35a+TCXsWvYHcZzqptQ4oQARAQABwsB2BBgBCAAqBYJkU/diCZAOd8K7\\nO81EfwKbDBYhBKekDJE9u2pk4A+sHQ53wrs7zUR/AABn0Qf+L+LaoUIyFAYg\\n2XePeU0UeBvY99l+mp7GhGpQ0HtWUs6yS7khGg+rFjRBSKNUSbtZVJzOkzVl\\nsE1IfjblyexRnlnk1qmKETuYPVGR1bMTZleO9iMjrohE+/NSl1HNC5ZMOMiL\\n2HHBVcDHZNVgq24mnt37lusvOU/5MxxuubIstiejapnu0fYU4GTHwD2BNiH/\\nYb9R3XExYwZMREtr9QrZgUrFXY/pUsxugLE1jxLh2a6vbd3lTeiVXF5CUJe5\\npM4TKZ43667CJkHH2ebPCvpdLjmApsk52Z9fZhAxJw9xBYrD4Xwt4VSbZYNC\\nM6W68qhpO52JLKexdGhHxv2lf9t9Hg==\\n=AWPc\\n-----END PGP PUBLIC KEY BLOCK-----\\n\",\"signature\":\"eip191:0x10dc44a1395f85acb7dbf2222ab84574e2bcc1880e31cb5b643953e1943cccee034b04da1f856009604b1cc05b6b8c74ecaa774d51d769de93e1336b2093ed831b\"}",
+  "encryptedPrivateKey": "{\"ciphertext\":\"c7465deac68328c5ff32ddf6242aa3765df065b507403f88135d5509d189062c138a8a1cce6a7b375d569214bd3e821a25a472b0711c4ef3792eb941903801800db0afb5c2fbf3d8930c70901348d549ffa57f3cd6da5839a3df471054766688b701d43d5e248521c45d19f653d035467b6c3b165cfeaab3f4f1351251e1879f33776bdf7d0b52f6130584bb93529a282029200c757b630e3f87f0cb438a1a48fb19c13e0ae84babcdbdc6c8d78a3d4c941a8a8803e93d6ace71c70ae076e1c54d9f45caccd867f7eb2098d055aef765ef61bc585f777a0194199674ec04d7422d5271dd3736a11292a33431840be1cfc40440d41c825ac0386d2acd507aaf11c74156f15d3f61efb24412bbe65caa04c525d048ad1fde96bc781588f9e1967fcfa7f83f054166053efec00d0d1c8829a6f0d7551443327967dd869f64ec20e251704f08f49511b3445f9bf9b1d8c6fbaf6f2f3c73056e9e48d151d5e30b84034e7906d6239ceb2c50723df99e371c931d069ab838338071b03117a4276727b73e471a4daf172ee62b9dc12a1309645a9809b91b154fb9139797ca8ece29cfa6f960997e1eb7f530ec05f191acb0892c948f4f46d7142b7835ff6c6ee188c7caabc10343d287eeaef7cbc729505f0a137101d2665854049e57810f395114da29f833f6f65dacfaba6e97b4df31b38f375c0caaee09fbc02aca9c2f66f5b39618bc204bd129463a12deb1c925ccdbc96519971f241fcb485c04a7bd7eb641f8e744da21bea0d36a2dc2db62b94583d7a9533a6f3242641f282f65167a751a3a95575fa4c40862474d797249e1dfbe54a6a4f99910482f60fdfbf4ef5872c387f9813c96694d94d04a2010d76c9da2df65c2a62fe4d0b958ba3d6838538405f1fd3c9af870c0dac68b76adceb768462cdc9f00ce0d724e6c1e97885886237e743de776916548d1205540fdae735631ee17bc5ef641f8799151c1e693436cc1d53e944f69e0821b56106f478bca79ecb6286b1372df43ed4a3ce073229395cb8b387919fee8b2ecc32ba29ede8271b943142691ffe8473e2a594e361bdd8576bf4601787d35b237bda2f0564d67aa2f60eeb375b52b2b6154ccedbbc2e404b4b9326690ac9d398bd6aa53212bbd78a4e2461073f90b007ceca3bc789f33a6516e23266c04383b7fc812cff1f5574a516adb420ecd7b4d1895aee58118645167a97e7216420c1e5a2d7ffb77f744fa9c1999400899c177bb5b165312ef265edc03349af8daf14f4160a7af31b75451150e3da8ccebba5db6fc4e92c963ef0f8bcbcc815cc1d18c7deea719ef569dd59a16ec7597966133437589592a594065ea15167cae608566e16cdad9e3b3bdcccde4d89a7dceaf8cf155f5c34fc6994016422e50e74dd4d4be44d8357d1bab3ecf263399d428605f9f0d7528410657a1dfdd6ac32e3184397d0677695dcad46bff065ab6db432dcde97784e17285d5fad7eac828eba0f5835662220a14a7893c6c53c283c2c4c217e8770dc4b3d322b207fed414dc354279da21750195e2d821b8dae4e45f8ad8e8f917f46b4cb2833660fcfed59b3e5c998ec7c2b82b2dc6283e5c5b3c6a3cea7089e80400286c980afdc2852b7cf04dad0defc647f0c91ab057a43b002c605d447dfdd186c6b81d4ab6459c230d0dbfa56d8c4e7e898d66b2b0b47aad7fa3013fa3b92a121dd6fdf8eab65cc48b47997c9fd3eeee0ef5f61e6cb3362b61d07b60cce878bf934b5745902aebfb8e8b50f16b6ae721ab1276d9e894859f7fa0e374097bcfff5d569ae93aec5e20465c5aad5ff89ed6e35f71159ffb4279e3008ac4616dbad7f5058f6108a26699abaeb62e6d83b332679acac2010f6e5272a81aeb968d59bdc30996c8ae0022bbf5b0585623dd4bab9a12707c658e3f8355ef3a41c7e657c72614c464c4ec6ec187a132e56b875a245e9634e1181d23ad18d8e6c722ec9c57182e548ea39f5954c783492ce8218d1e529d3cf3cf84b0ee9e440e5fefde4734d4e003eab83f500eaf526f8a695df011df02fa3a752835458ba28ad4a7e63eef6fd63077d52a93bf142741d542752d430822534cd07df4f5960b654bede3f9dbe461d022771ccb8df8e6774295a8407cabdbfe1abf7d1437784e458a2583194e8b39bd09b4bacdacc10aa41c0e03972b337d58439de868f27e277633fdb0162ceb5f95c2c774be15248d5140d25f46874e74d39f4e5105bb5b3c7d9b0454c3137ad75a183f58fa64dcd892a0515e482e74b3271230da09f94980ad77a4ea1be85b45037bafa6729d282d620ca2e37c2ce9f68f1e11285c1d81bd464a3191d7dfbb10ac82780d971007b14614bca9688c957973b3931028663aa0f5231ae8e554932266d4f312f22739dec983fdf22ebcc9a1b4867304e392767b00276b7c263ecaac19ec0fa9b09db763127ce9e4e98687c85d892e9cc5545e59037e42936f9357ac1a8cbb73bacf30cd011dcae533febc43ab24bbf55b3aa364f7dd0ce2975c27ccdfffb1dbda26f90a8e7bd944a2746283cd139424539cb5f958804d2f5326fd2e6d54189c5a39560f417688d0518b06aeb1c8fd4a95cff62ba72caa16be1e76d1ba5ee67ded8dada16102f2f8bb8a23d561e7a363e12cf30b67088083dc1d38e040c9e0a2df03bcf65a9a8937863624fd1fbdb0d4db68cdeaf00d13e9e745b6bc7ebd9fbbb6f6fb004dd2094ef39105d54f75670a66de19f31a28cbf18f27627185d60458a482ece43d52e7b1249be46cf8d3fca80004a3826540816c8435d6ff7963eb906900e20250189043d362c2574775592f55125948581ede19a3bebb21794cbe7d708b52c8b83493a74a312737e2eb5aaae563d25c42b10b7ba98439cd4d44cecd2302436aea8c833f3f3d559f5c86bf427c1fd23875a87d0cad78612490527a12e82fa0ef1159a697e715875e56bed50ad3b6ce07b00729f8b00eff8563697c80916a050c7de07adaf8d5f6300e83480bfa15484e7b3930761c95bf9f57542990c3e0cad7c250269e494faa1f3e7048c67eb6948c5448f4c01c08074a941b52186a78d7fe56117e6ec869628ad8d162385c0a4c9e064ae71f69ddf136a92220ce2911f18af20430c473c985ed9fef1037d2d206555e4e01fb0a415fa50ff597a64b7dfd81d89829838587c278dc19c3378e8972ac11e73c2bbf8ab65f32180cbb3396ca924a7248e401c6a8cc495e575121784ceab8e30ecb2689fdfa8af09f653be8f643ccf6139177da7337c5139e966ad8ec5f0293ebbe8658da40d5dc81ed5fed0d726e8559b78d84aaaf97517984935abfc25178a48e572b9a6a188dbdb58177b0ee05e9ac00bf17f35d326231aa51f1f6646c7d0cb87dfe6cda560ca7d5e096a5fff58d166147ccfc68c85fd47b6b1627f37f4796c293e109f5ad15c8454549a865ac1080fb76d1121039891f348f395b567474a3e7adef0057b181fea9ab2d0645b7cd3a6e4a6ce2368068ac82a0b89a1cc204beec44669c06d53cb6eb67e9514e0bb27ecb7182c24262ff88c14cd2ecbe37a3a79857773ad6a52d9bc1381218593a4ee9603c977ed74a75773b0c9c4644489da137b9b9e1c148279e528997d2c5926296530959fc77021133663ad3836b219f4296f1ac81c5297c061261c8c3fb2de1f9c786bb366030ecbb4c7d401cd020ced38ab9d6a2d534853d1db42e902c6eb1983178f69c61c69f70130190f473f88ef2c71d163c0c1e487d1a1b69eefd3d5ee0e8c3b37e0349ec3598e75745070384afb0566e26e4b43cc4b12c1d38d45bbf9833e4ff4ea1bd4e09a6336e862a40161075a94e45f119c47b15e8b5365762e5f916ba5ce3fdc873b1be1240b50936d4670507769fc9fff3f9b2ee505784a8a591df5bf8fdafbbaa0ad0b21f5650feefc7850ef63a6546a2587bfa7a8b89b17fce5d28e5e6ee9fa8e1eb1fb1273fec53c0401573dc4cf8d52b7d10ae3cad0d6f712cf7361dc79aa2fcc4e071e19de33f326f6ba90c303f309d66969756b3a34358472553a6ff52c5b1535f2d8209d4e7695293fc4aeb79a4b6006f7fbb2ed4f83aab799ec647935a53b3bd5245210dd173f56053cbdb9c1c1cfc393a60030d88ba34e4033b60b1265256c66811f25e53d92e012e1f303ad1322e7702b7c83db259d79860e78ba0a087c1ff038afbda2b833a9adda6ae816cebdb7df039b7aada5b45bce27222d1485437ac8663ee4f756ce0d287835e014cdc1c9a6e1e56fb6e455a8545ad1c0c51d4d116fc7d41ac401ed17f10c9632949c12f37ead415d1e2fb4fc757600c3f0d88bcb4a77d9667b85c3912cf54d870029714eaccfff3ed87ed64a5696c877b850b56c9922fe746e1c36d971095d7f6d6720f959bc41fe923a269128e96f30221a093d42a1bc5245977a8489b2ec4c6c3fc75a4f301251280ac03f815ab9f34fbec647d9adcb2870d8cb126de8717d9870bfbcf153dcdda06fb6ee08a639ba11b70749a69470ba16fd910cb363af7cdca8bf51484477b1cb9328101dcdec1154431c9d7f3cd49db7b1b916d1b7aa526f68f3bc62f8810ff4d38f9bda33510dbaec4db116c2e60cbff1df3a0022c1b1b4d780a9f671f98c27feb0fe9967c08759827dbb25f3c8dcab3cf984ab2b2a7e789b97c19c7ae483a3e771d7f41b14996f62d5e48666c29ecb5270b702a0f32189005f2bd6e66050e141a1cd1c9aff7cb902f42b9c1a85b48b09b90dd7b4fa37fb8f5c41a5ef96f0896d6df6f83395a910b99536fe628e4a83dec574125013e50c8600e06c88f0802bdd9c87556269ccac616428d3d727b5086820e35e2f853e8cd67827501384ac6dbdd674ac88164bc255e5b0e05cb18bb55aaf78184910d1cf24eb7b2bba63d0f681fedf32618a1f6e3905cfb1adcdce67ac69e4af8\",\"salt\":\"f0714db48256fad25f38c0f8e8f12fdd1958a9856657ce56c313308a671ef64c\",\"nonce\":\"dbbc53ca498420eb03b9e181\",\"version\":\"eip191-aes256-gcm-hkdf-sha256\",\"preKey\":\"348d42f2faa246114c8c62c75812cb66df873d5bb57e8ec106974871a08189ee\"}",
+  "encryptionType": "eip191-aes256-gcm-hkdf-sha256",
+  "name": "",
+  "encryptedPassword": null,
+  "nftOwner": null
+}
+```
+
+The SHA-256 of the JSON below is:
+
+```
+9c5f42d8842845e64e1c50c59f487810f78d3063153c7a77bd8c2a453f248518
+```
+
+Then we take the EIP-191 signature of the hash above using a wallet with this private key:
+
+```
+0x25d2c7144ca6ff91412f6c7340f9c352e4eb4bac283b4a1a6195cd6e97ea58c4
+```
+
+And we get the verification proof below:
+
+```
+eip191:0x5b614e0f9196f0982ef4cba8381bacd128e6ab6eea2f34f28ae682c0dbb655fc433068ce7fc64e9da27516f02377eb887aad50ab8240339f670c62cea16d8c961b
+```
