@@ -9,9 +9,7 @@ Verification Proof is the outermost composable block that is sent along when upd
 | Verification Proof | Definition                                                             | Proof of Verification                                    |
 | ------------------ | ---------------------------------------------------------------------- | -------------------------------------------------------- |
 | eip712v2:signature | Verification proof generated from off-chain EIP-712 signing of payload | The type is proven by verifying the signature of eip712. |
-| eip191             | Verification proof generated from off-chain EIP-191 signing of payload | The type is proven by verifying the signature of eip712. |
-
-########################################################################################################
+| eip191:signature   | Verification proof generated from off-chain EIP-191 signing of payload | The type is proven by verifying the signature of eip712. |
 
 1. `eip712v2:signature` - Verification proof generated from off-chain EIP-712 signing of payload.
 
