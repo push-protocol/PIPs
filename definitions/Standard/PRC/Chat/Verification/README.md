@@ -16,7 +16,7 @@ This verification process is designed to ensure the integrity and authenticity o
 
 ### Chat Verification
 
-On the other hand, chat verification pertains to the validation of the messages exchanged within the chat system. Every time a message is sent or received, the system and the client both execute a verification process.
+On the other hand, chat verification is the validation of the messages exchanged within the chat system. Every time a message is sent or received, the system and the client both execute a verification process.
 
 This process involves verifying the signature attached to each message. As each message is signed with the sender's private key, the system and the client can use the sender's public key to verify the signature, thus confirming the authenticity and integrity of the message. Both Push Nodes and client applications participate in this verification process.
 

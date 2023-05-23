@@ -9,7 +9,7 @@ This current version of the chat payload includes a diverse range of properties,
 ## Specifications
 
 ```typescript
-export interface Message {
+{
   fromCAIP10: string
   toCAIP10: string
   fromDID: string
