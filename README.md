@@ -29,7 +29,7 @@ Note: Finalized PIPs will be listed in Accepted PIPs, while PIPs that are going 
 
 The current editors are:
 
-* Pranshu Rastogi [@pranshu3196](https://twitter.com/pranshurastogii)
+* Pranshu Rastogi [@pranshurastogii](https://twitter.com/pranshurastogii)
 * Harsh Rajat [@harshrajat](https://twitter.com/harshrajat)
 
 ## Contact us
