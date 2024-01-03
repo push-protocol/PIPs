@@ -24,7 +24,12 @@ Notification payload type for Push is infinitely extensible and opens a huge ran
 		"acta": "encrypted by secret using sectype | [Optional] The cta link parsed inside the app",
 		"aimg": "encrypted by secret using sectype | [Optional] The image url which is shown inside the app",
 		"etime": "[Optional] if given, notif will be deleted after this in epoch",
-		"hidden" :"[Optional] if given, notif will not show in user feed"
+		"hidden" :"[Optional] if given, notif will not show in user feed",
+    "additionalMeta": {
+      "type": "contains uniform data identifying the kind of data present along with a version separated by `+`",
+      "data": "conatins the metadata",
+      "domain": "[Optional]"
+    }
 	},
 	"recipients": 0x0 for type 1, 0xtarget for type 3 or [
 		0x1: null or [{
@@ -55,6 +60,11 @@ Notification payload type for Push is infinitely extensible and opens a huge ran
 |**acta** |  [Optional] is the call to action of that feed item.|
 |**aimg**  | [Optional] is the image shown in the feed item, this field is also capable of carrying youtube links.|
 |**etime**  |  [Optional] if given, notif will be deleted after this in epoch|
+|**hidden** | [Optional] If given, notif wont be shown in the feeds
+|**additionalMeta**| [Optional] Contains additional meta data to give a more personalised and contextual data
+|**type**| contains uniform data identifying the kind of data present along with a version separated by `+`.
+|**data**| conatins the metadata.
+|**domain**| [Optional] conatins details about the entity for which the `additionalMeta` is defined.
 |**recipients**  |  [required] Recipents address needs to be defined depending on the payload type, if 0x00 is provided it will represents all the subscribers of the channeland in the case of secret payload each subscriber address will be mapped with the secret.|
 |**secret** | [Optional] is required to encryption and decryption of payload data, this will be mappeed with user address as key value pair.|
 
@@ -203,4 +213,29 @@ Notification payload type for Push is infinitely extensible and opens a huge ran
         ]
 }
 
+```
+<br>
+
+##### **Additional Meta Payload** :arrow_right:
+
+```ts
+{
+  "data": {
+    "acta": "",
+    "aimg": "",
+    "amsg": "VideoCall",
+    "asub": "VideoCall",
+    "type": "3",
+    "additionalMeta": {
+      "type": "1+1", // <type>+<version>
+      "data": '{"chatId":"c04c90ba7057c10c59925f36ec7952bd7e7f9436517977115da2bdcd5b28ec30","status":4,"senderAddress":"0x842a882b4c054801F06d52181231A77e467BE41f","signalingData":null,"recipientAddress":"0x459AB94401A00AdD8C6e230596Bde9B2F113E8BE"}',
+      "domain": "push.org" // optional
+    }
+  },
+  "recipients": "0x459AB94401A00AdD8C6e230596Bde9B2F113E8BE",
+  "notification": {
+    "body": "Video Call from 0x842a882b4c054801F06d52181231A77e467BE41f",
+    "title": "Video Call from 0x842a882b4c054801F06d52181231A77e467BE41f"
+  }
+}
 ```
