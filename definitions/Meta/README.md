@@ -6,13 +6,13 @@ There are three major categories of PIPs, as well as more specific subcategories
 
     * `Core`: improvements requiring a consensus fork or changes in Push nodes, as well as changes that are not necessarily consensus critical but may be relevant to “core dev” discussions, and the miner/node strategy changes.
 
-    * `Interface` - : includes improvements around client API/RPC specifications and standards, and also certain language-level standards like method names and contract ABIs. The label “interface” aligns with the [interfaces repo] and discussion should primarily occur in that repository before an PIP is submitted to the PIPs repository.
+    * `Interface` - : includes improvements around client API/RPC specifications and standards, and also certain language-level standards like method names and contract ABIs. The label “interface” aligns with the [interfaces repo] and discussion should primarily occur in that repository before a PIP is submitted to the PIPs repository.
 
     * `Networking` - includes networking specifications and proposals around how push nodes communicate and interoperate.
 
     * `PRC` - signifies, application-level standards and conventions, including notification, chat payloads, and content markdown. It also includes subcategories.
 
-        * `Notifications` -  follow composable blocks that helps achieve modular structure and helps in building on top of them:
+        * `Notifications` -  follow composable blocks that help achieve modular structure and help in building on top of them:
 
         * `Chat` -  \<WIP>
 
@@ -20,6 +20,6 @@ There are three major categories of PIPs, as well as more specific subcategories
 
 3. An Informational PIP provides general guidelines or information to the EPNS community, but does not propose a new feature. Informational PIPs do not necessarily represent a EPNS community consensus or recommendation, so users and implementors are free to ignore Informational PIPs or follow their advice.
 
-It is highly recommended that a single PIP contain a single key proposal or new idea. The more focused the PIP, the more successful it tends to be. e.g. - A typo or single change in payloads does'nt require PIP. It should be contributing as major improvement or change multiple clients.
+It is highly recommended that a single PIP contain a single key proposal or new idea. The more focused the PIP, the more successful it tends to be. e.g. - A typo or single change in payloads doesn't require PIP. It should be contributing as major improvement or change multiple clients.
 
 A PIP must meet certain minimum criteria. It must be a clear and complete description of the proposed enhancement. The enhancement must represent a net improvement. The proposed implementation, if applicable, must be solid and must not complicate the protocol unduly.
