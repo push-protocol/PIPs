@@ -8,7 +8,7 @@ PIP proposals are classified into **type** which can then optionally be categori
 
 ### Type
 
-Type decribes the high level standard which the PIP wants to improve.
+Type describes the high level standard which the PIP wants to improve.
 
 1. **Standard**  PIP describes any change that affects most or all Push protocol implementations, such as changes in core, interface, networking or application level standards.
 
@@ -38,9 +38,9 @@ Subcategory are optional and mainly required for **PRC** category, they define t
 
 ### Niche
 
-Niche are optional and are required in some **Subcateory** sections. they define the specific low level funcationality that needs to be changed, improved or addressed.
+Niche are optional and are required in some **Subcategory** sections. they define the specific low level functionality that needs to be changed, improved or addressed.
 
-For Subcategory: **Nofification**
+For Subcategory: **Notification**
 
 1. **Verification**: Addresses different types of verifications that can be used while sending a notification to Push node.
 
@@ -48,7 +48,7 @@ For Subcategory: **Nofification**
 
 3. **Payload**: Addresses what payload of the notification should contain including the way notification should be encrypted, things payload can carry and how they transform and the recipients for which it is intended to be.
 
-4. **Content**: Defines how content inside the notfication can be displayed, mostly markdown for title and the body of notification.
+4. **Content**: Defines how content inside the notification can be displayed, mostly markdown for title and the body of notification.
 
 For Subcategory: **Chat**
 
