@@ -17,7 +17,7 @@ If this period results in necessary normative changes, it will revert the PIP to
 
 **Final** - This represents the final standard. A Final proposal exists in a state of finality and should only be updated to correct errata and add non-normative clarifications.
 
-**Stagnant** - Any proposal in Draft or Review or Last Call if inactive for a period of 4 months or greater, is moved to Stale. The proposal may be resurrected from this state by Authors or  Editors by moving it back to Draft or it's earlier status. If not resurrected, a proposal may stay forever in this status.
+**Stagnant** - Any proposal in Draft or Review or Last Call if inactive for a period of 4 months or greater, is moved to Stale. The proposal may be resurrected from this state by Authors or  Editors by moving it back to Draft or its earlier status. If not resurrected, a proposal may stay forever in this status.
 
 **Withdrawn** - The  Author(s) have withdrawn the proposed submission. This state has finality and can no longer be resurrected using this proposal number. If the idea is pursued at a later date it is considered a new proposal.
 
