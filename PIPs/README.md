@@ -16,4 +16,4 @@ Read [definitions](../definitions) to understand types, categories, subcategorie
 
 ## Understanding nomenclature of PIP submission?
 
-All PIPs rest under <code>/consideration</code> folder. Once a PIP is finalized, it is duplicated and moved to the PIPs folder. If a PIP is living, then it's link is moved here.
+All PIPs rest under <code>/consideration</code> folder. Once a PIP is finalized, it is duplicated and moved to the PIPs folder. If a PIP is living, then its link is moved here.
