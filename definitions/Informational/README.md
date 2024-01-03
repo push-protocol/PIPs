@@ -12,7 +12,7 @@ There are three major categories of PIPs, as well as more specific subcategories
 
     * `PRC` - signifies, application-level standards and conventions, including notification, chat payloads, and content markdown. It also includes subcategories.
 
-        * `Notifications` -  follow composable blocks that helps achieve modular structure and helps in building on top of them:
+        * `Notifications` -  follow composable blocks that help achieve modular structure and help in building on top of them:
 
         * `Chat` -  \<WIP>
 
@@ -20,6 +20,6 @@ There are three major categories of PIPs, as well as more specific subcategories
 
 3. An Informational PIP provides general guidelines or information to the EPNS community, but does not propose a new feature. Informational PIPs do not necessarily represent a EPNS community consensus or recommendation, so users and implementors are free to ignore Informational PIPs or follow their advice.
 
-It is highly recommended that a single PIP contain a single key proposal or new idea. The more focused the PIP, the more successful it tends to be. e.g. - A typo or single change in payloads does'nt require PIP. It should be contributing as major improvement or change multiple clients.
+It is highly recommended that a single PIP contain a single key proposal or new idea. The more focused the PIP, the more successful it tends to be. e.g. - A typo or single change in payloads doesn't require PIP. It should be contributing as major improvement or change multiple clients.
 
 A PIP must meet certain minimum criteria. It must be a clear and complete description of the proposed enhancement. The enhancement must represent a net improvement. The proposed implementation, if applicable, must be solid and must not complicate the protocol unduly.
