@@ -8,7 +8,7 @@ PIPs define the standards in the Push protocol ecosystem in which anyone can cre
 
 ## How to submit a PIP?
 
-Before you initiate a pull request, please read the [PIP-1](./PIPs/consideration/pip-1-workflow-index.md) process document. Read  [definitions](./definitions) to understand types, categories, subcategories, and niches. Ideas should be thoroughly discussed on [Push discord](https://discord.gg/YVPB99F9W5) or [Push forum](https://gov.push.org/c/pip/29).
+Before you initiate a pull request, please read the [PIP-1](./PIPs/consideration/pip-1-workflow-index.md) process document. Read  [definitions](./definitions) to understand types, categories, subcategories, and niches. Ideas should be thoroughly discussed on [Push discord](https://discord.com/invite/pushprotocol) or [Push forum](https://gov.push.org/c/pip/29).
 
 Read this to learn about how to [submit proposal](./pip-lifecycle.md) and [template](./pip-template.md) of standard PIPs.
 
@@ -34,7 +34,7 @@ The current editors are:
 
 ## Contact us
 
-Stay in touch! [Website](https://www.push.org), [Twitter](https://twitter.com/pushprotocol), [Discord](https://discord.gg/YVPB99F9W5), [Docs](https://docs.push.org), [Whitepaper](https://whitepaper.push.org/), [Telegram](https://t.me/epnsproject), [Medium](https://medium.com/ethereum-push-notification-service), [YouTube](https://www.youtube.com/c/EthereumPushNotificationService)
+Stay in touch! [Website](https://www.push.org), [Twitter](https://twitter.com/pushprotocol), [Discord](https://discord.com/invite/pushprotocol), [Docs](https://docs.push.org), [Whitepaper](https://whitepaper.push.org/), [Telegram](https://t.me/epnsproject), [Medium](https://medium.com/ethereum-push-notification-service), [YouTube](https://www.youtube.com/c/EthereumPushNotificationService)
 
 ## History
 
